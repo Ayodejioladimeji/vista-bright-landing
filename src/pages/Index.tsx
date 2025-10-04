@@ -81,16 +81,16 @@ const Index = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/85 to-foreground/60"></div>
         </div>
 
-        <div className="container mx-auto px-4 z-10 relative">
-          <div className="max-w-3xl animate-fade-in-up">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl lg:text-7xl text-background mb-6 leading-tight">
+        <div className="container mx-auto px-4 sm:px-6 z-10 relative">
+          <div className="max-w-4xl animate-fade-in-up">
+            <h1 className="font-black text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-background mb-6 leading-tight">
               Building Your Prosperity,{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-secondary">
+              <span className="text-secondary">
                 One Smart Decision
               </span>{" "}
               at a Time
             </h1>
-            <p className="text-xl md:text-2xl text-background/90 mb-8 max-w-2xl">
+            <p className="text-lg sm:text-xl md:text-2xl text-background/90 mb-8 max-w-3xl leading-relaxed">
               Achieving your goals with confidence requires fast, reliable, and transparent
               financial solutions. At Prospera Finance, we understand your needs, and we're here to
               financially secure your goals.
@@ -99,7 +99,7 @@ const Index = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-gradient-secondary text-lg px-8 py-6 shadow-strong hover:shadow-medium transition-all"
+                variant="secondary"
               >
                 <Link to="/contact">
                   Get Started Today <ArrowRight className="ml-2 h-5 w-5" />
@@ -109,7 +109,7 @@ const Index = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-6 border-2 border-background text-background hover:bg-background hover:text-foreground"
+                className="border-background text-background hover:bg-background hover:text-foreground"
               >
                 <Link to="/services">Explore Services</Link>
               </Button>
@@ -119,15 +119,15 @@ const Index = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-gradient-primary">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+      <section className="py-12 sm:py-16 bg-gradient-primary">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="font-heading font-bold text-4xl md:text-5xl text-primary-foreground mb-2">
+                <div className="font-black text-3xl sm:text-4xl md:text-5xl text-primary-foreground mb-2">
                   {stat.value}
                 </div>
-                <div className="text-primary-foreground/80 text-sm md:text-base">{stat.label}</div>
+                <div className="text-primary-foreground/90 text-sm sm:text-base font-medium">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -135,13 +135,13 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl text-foreground mb-4">
+            <h2 className="font-black text-3xl sm:text-4xl md:text-5xl text-foreground mb-4">
               Our Services
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto">
               Tailored financial solutions designed to meet you right where you are
             </p>
           </div>
@@ -154,18 +154,18 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6">
-                  <div className="w-12 h-12 bg-gradient-primary rounded-lg flex items-center justify-center mb-4">
-                    <service.icon className="h-6 w-6 text-primary-foreground" />
+                  <div className="w-14 h-14 bg-gradient-primary rounded-xl flex items-center justify-center mb-4">
+                    <service.icon className="h-7 w-7 text-primary-foreground" />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl mb-2">{service.title}</h3>
-                  <p className="text-muted-foreground">{service.description}</p>
+                  <h3 className="font-bold text-xl sm:text-2xl mb-3">{service.title}</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed">{service.description}</p>
                 </CardContent>
               </Card>
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg" className="bg-gradient-primary shadow-soft">
+            <Button asChild size="lg">
               <Link to="/services">
                 View All Services <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
@@ -175,10 +175,10 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl text-foreground mb-4">
+            <h2 className="font-black text-3xl sm:text-4xl md:text-5xl text-foreground mb-4">
               Why Choose Prospera Finance?
             </h2>
           </div>
@@ -194,8 +194,8 @@ const Index = () => {
                   <CheckCircle2 className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-semibold text-xl mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="font-bold text-xl sm:text-2xl mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
@@ -204,13 +204,13 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 sm:py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="max-w-3xl mx-auto animate-fade-in-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl text-primary-foreground mb-6">
+            <h2 className="font-black text-3xl sm:text-4xl md:text-5xl text-primary-foreground mb-6">
               Ready to Build Your Prosperity?
             </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8">
+            <p className="text-lg sm:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
               Join thousands of satisfied clients who trust Prospera Finance for their financial
               needs
             </p>
@@ -218,7 +218,7 @@ const Index = () => {
               <Button
                 asChild
                 size="lg"
-                className="bg-secondary hover:bg-secondary/90 text-lg px-8 py-6 shadow-strong"
+                variant="secondary"
               >
                 <Link to="/contact">Apply for a Loan</Link>
               </Button>
@@ -226,7 +226,7 @@ const Index = () => {
                 asChild
                 size="lg"
                 variant="outline"
-                className="text-lg px-8 py-6 border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground"
+                className="border-2 border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-foreground"
               >
                 <Link to="/services">Explore Investment Plans</Link>
               </Button>

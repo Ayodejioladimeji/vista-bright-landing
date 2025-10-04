@@ -9,39 +9,34 @@ import testimonialBg from "@/assets/testimonial-bg.jpg";
 const Testimonials = () => {
   const testimonials = [
     {
-      quote:
-        "Prospera Finance Limited has been an invaluable partner in our growth journey. Their customised financial solutions and exceptional service have helped us overcome complex challenges and consistently achieve our business objectives.",
+      quote: "Prospera Finance Limited has been an invaluable partner in our growth journey. Their customised financial solutions and exceptional service have helped us overcome complex challenges and consistently achieve our business objectives.",
       author: "Amie Oluwaseyi Angela",
       position: "CEO, La Kusine",
       title: "Trusted Growth Partner",
     },
     {
-      quote:
-        "Prospera Finance has quickly become a trusted partner in our business journey. Their expertise in financial management and planning has enabled us to make informed decisions and achieve sustainable growth. We truly value their commitment to excellence and look forward to a lasting partnership.",
+      quote: "Prospera Finance has quickly become a trusted partner in our business journey. Their expertise in financial management and planning has enabled us to make informed decisions and achieve sustainable growth.",
       author: "Umeobi Stanley Ikenna",
       position: "CEO, Cadast",
-      title: "Driving Informed Decisions and Success",
+      title: "Driving Informed Decisions",
     },
     {
-      quote:
-        "I was truly impressed by the professionalism and expertise of the Prospera Finance Limited team. They offered us a flexible, affordable financing solution tailored to our unique needs, and their ongoing support has been nothing short of outstanding.",
+      quote: "I was truly impressed by the professionalism and expertise of the Prospera Finance Limited team. They offered us a flexible, affordable financing solution tailored to our unique needs.",
       author: "Mr. Misheal Ike Chukwuma",
       position: "CEO, Nevaeh Travel & Tour",
-      title: "Flexible Support You Can Count On",
+      title: "Flexible Support",
     },
     {
-      quote:
-        "Prospera Finance Limited has been a game-changer for our business. Their innovative financial solutions have helped us optimize cash flow, cut costs, and boost profitability. I highly recommend them to any business seeking a reliable financial partner.",
+      quote: "Prospera Finance Limited has been a game-changer for our business. Their innovative financial solutions have helped us optimize cash flow, cut costs, and boost profitability.",
       author: "Mr. Tochukwu Emmanuel Chukwuma",
       position: "CEO, Emmatobest Trading Ventures",
-      title: "Innovative Solutions for Real Results",
+      title: "Innovative Solutions",
     },
     {
-      quote:
-        "Partnering with Prospera Finance Limited has made a real difference in our business. Their customised financial support and dedicated service have given us the confidence to tackle challenges and the tools to reach new milestones.",
+      quote: "Partnering with Prospera Finance Limited has made a real difference in our business. Their customised financial support and dedicated service have given us the confidence to tackle challenges.",
       author: "Mrs. Angela John",
       position: "CEO, Angelahub Limited",
-      title: "Empowering Businesses to Reach New Milestones",
+      title: "Empowering Businesses",
     },
   ];
 
@@ -49,72 +44,39 @@ const Testimonials = () => {
     <div className="min-h-screen">
       <Navbar />
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center">
+      <section className="relative h-[50vh] sm:h-[60vh] flex items-center">
         <div className="absolute inset-0">
-          <img
-            src={testimonialBg}
-            alt="Success Stories"
-            className="w-full h-full object-cover"
-          />
+          <img src={testimonialBg} alt="Success Stories" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 to-foreground/60"></div>
         </div>
-        <div className="container mx-auto px-4 z-10 relative">
+        <div className="container mx-auto px-4 sm:px-6 z-10 relative">
           <div className="max-w-3xl animate-fade-in-up">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl text-background mb-4">
-              Success Stories
-            </h1>
-            <p className="text-xl text-background/90">
-              Our greatest pride comes from the success of our clients
-            </p>
+            <h1 className="font-black text-4xl sm:text-5xl md:text-6xl text-background mb-4">Success Stories</h1>
+            <p className="text-lg sm:text-xl text-background/90">Our greatest pride comes from the success of our clients</p>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 animate-fade-in-up">
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              At Prospera Finance, our greatest pride comes from the success of our clients. Here's
-              what business leaders have to say about partnering with us:
-            </p>
-          </div>
-
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="animate-fade-in-up hover:shadow-medium transition-all"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <CardContent className="p-8">
-                  <div className="mb-6">
-                    <Quote className="h-12 w-12 text-primary/20" />
-                  </div>
-                  <h3 className="font-heading font-semibold text-xl mb-4 text-primary">
-                    {testimonial.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-6 text-lg leading-relaxed italic">
-                    "{testimonial.quote}"
-                  </p>
+              <Card key={index} className="animate-fade-in-up hover:shadow-medium transition-all" style={{ animationDelay: `${index * 100}ms` }}>
+                <CardContent className="p-6 sm:p-8">
+                  <Quote className="h-10 w-10 sm:h-12 sm:w-12 text-primary/20 mb-4" />
+                  <h3 className="font-black text-lg sm:text-xl mb-4 text-primary">{testimonial.title}</h3>
+                  <p className="text-muted-foreground mb-6 text-base sm:text-lg leading-relaxed italic">"{testimonial.quote}"</p>
                   <div className="border-t border-border pt-4">
-                    <p className="font-heading font-semibold text-foreground">
-                      {testimonial.author}
-                    </p>
-                    <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                    <p className="font-bold text-base sm:text-lg text-foreground">{testimonial.author}</p>
+                    <p className="text-sm sm:text-base text-muted-foreground">{testimonial.position}</p>
                   </div>
                 </CardContent>
               </Card>
             ))}
           </div>
 
-          <div className="text-center mt-16 animate-fade-in-up" style={{ animationDelay: "500ms" }}>
-            <p className="text-lg text-muted-foreground mb-6">
-              These stories remind us why we exist: to empower individuals and businesses to prosper
-              with confidence.
-            </p>
-            <Button asChild size="lg" className="bg-gradient-primary shadow-soft">
+          <div className="text-center mt-16 animate-fade-in-up">
+            <Button asChild size="lg">
               <Link to="/contact">Start Your Success Story</Link>
             </Button>
           </div>
