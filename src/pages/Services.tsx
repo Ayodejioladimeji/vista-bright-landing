@@ -112,13 +112,13 @@ const Services = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 sm:py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="max-w-3xl mx-auto animate-fade-in-up">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl text-primary-foreground mb-6">
+            <h1 className="font-black text-4xl sm:text-5xl md:text-6xl text-primary-foreground mb-6">
               Our Services
             </h1>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed">
               Tailored financial solutions designed to meet you right where you are, with flexible
               and reliable options for every need.
             </p>
@@ -127,8 +127,8 @@ const Services = () => {
       </section>
 
       {/* Services Grid */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="space-y-16">
             {services.map((service, index) => (
               <Card
@@ -137,38 +137,38 @@ const Services = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-8 md:p-12">
-                  <div className="flex items-start gap-6">
-                    <div className="flex-shrink-0 w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
-                      <service.icon className="h-8 w-8 text-primary-foreground" />
+                  <div className="flex items-start gap-4 sm:gap-6">
+                    <div className="flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 bg-gradient-primary rounded-xl flex items-center justify-center">
+                      <service.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary-foreground" />
                     </div>
                     <div className="flex-1">
-                      <h2 className="font-heading font-bold text-3xl mb-4">{service.title}</h2>
-                      <p className="text-lg text-muted-foreground mb-6">{service.description}</p>
+                      <h2 className="font-black text-2xl sm:text-3xl mb-4">{service.title}</h2>
+                      <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
 
-                      <div className="grid md:grid-cols-2 gap-6 mb-6">
+                      <div className="grid sm:grid-cols-2 gap-6 mb-6">
                         <div>
-                          <h3 className="font-heading font-semibold text-xl mb-3 text-primary">
+                          <h3 className="font-bold text-lg sm:text-xl mb-3 text-primary">
                             Ideal For:
                           </h3>
                           <ul className="space-y-2">
                             {service.idealFor.map((item, i) => (
                               <li key={i} className="flex items-start">
-                                <span className="text-primary mr-2">•</span>
-                                <span className="text-muted-foreground">{item}</span>
+                                <span className="text-primary mr-2 text-lg">•</span>
+                                <span className="text-muted-foreground text-base">{item}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
                         <div>
-                          <h3 className="font-heading font-semibold text-xl mb-3 text-secondary">
+                          <h3 className="font-bold text-lg sm:text-xl mb-3 text-secondary">
                             Why It Works:
                           </h3>
                           <ul className="space-y-2">
                             {service.benefits.map((item, i) => (
                               <li key={i} className="flex items-start">
-                                <span className="text-secondary mr-2">•</span>
-                                <span className="text-muted-foreground">{item}</span>
+                                <span className="text-secondary mr-2 text-lg">•</span>
+                                <span className="text-muted-foreground text-base">{item}</span>
                               </li>
                             ))}
                           </ul>
@@ -182,11 +182,11 @@ const Services = () => {
           </div>
 
           <div className="text-center mt-12 animate-fade-in-up">
-            <p className="text-lg text-muted-foreground mb-6">
+            <p className="text-base sm:text-lg text-muted-foreground mb-6 leading-relaxed">
               At Prospera Finance, every service is crafted with one goal: to make prosperity
               possible for you.
             </p>
-            <Button asChild size="lg" className="bg-gradient-primary shadow-soft">
+            <Button asChild size="lg">
               <Link to="/contact">Get Started Today</Link>
             </Button>
           </div>

@@ -64,13 +64,13 @@ const Contact = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero">
-        <div className="container mx-auto px-4 text-center">
+      <section className="py-16 sm:py-20 bg-gradient-hero">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
           <div className="max-w-3xl mx-auto animate-fade-in-up">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl text-primary-foreground mb-6">
+            <h1 className="font-black text-4xl sm:text-5xl md:text-6xl text-primary-foreground mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-primary-foreground/90">
+            <p className="text-lg sm:text-xl text-primary-foreground/90 leading-relaxed">
               We are committed to making your financial journey seamless. Whether you're seeking
               loans, investment opportunities, or simply need more information, our team is here to
               help.
@@ -80,9 +80,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
             {contactInfo.map((info, index) => (
               <Card
                 key={index}
@@ -90,19 +90,19 @@ const Contact = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <CardContent className="p-6 text-center">
-                  <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                    <info.icon className="h-8 w-8 text-primary-foreground" />
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                    <info.icon className="h-7 w-7 sm:h-8 sm:w-8 text-primary-foreground" />
                   </div>
-                  <h3 className="font-heading font-semibold text-xl mb-2">{info.title}</h3>
+                  <h3 className="font-bold text-xl sm:text-2xl mb-3">{info.title}</h3>
                   {info.link ? (
                     <a
                       href={info.link}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-muted-foreground hover:text-primary transition-colors text-base"
                     >
                       {info.content}
                     </a>
                   ) : (
-                    <p className="text-muted-foreground">{info.content}</p>
+                    <p className="text-muted-foreground text-base">{info.content}</p>
                   )}
                 </CardContent>
               </Card>
@@ -112,18 +112,18 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="max-w-3xl mx-auto">
             <Card className="animate-fade-in-up" style={{ animationDelay: "300ms" }}>
-              <CardContent className="p-8">
-                <h2 className="font-heading font-bold text-3xl mb-2 text-center">
+              <CardContent className="p-6 sm:p-8">
+                <h2 className="font-black text-2xl sm:text-3xl mb-2 text-center">
                   Send Us a Message
                 </h2>
-                <p className="text-center text-muted-foreground mb-8">
+                <p className="text-center text-muted-foreground mb-8 text-base leading-relaxed">
                   Have a question or want to discuss your options? Fill out the form below and our
                   team will get back to you within 24 hours.
                 </p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                    <label htmlFor="name" className="block text-base font-semibold mb-2">
                       Full Name <span className="text-destructive">*</span>
                     </label>
                     <Input
@@ -137,7 +137,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                    <label htmlFor="email" className="block text-base font-semibold mb-2">
                       Email Address <span className="text-destructive">*</span>
                     </label>
                     <Input
@@ -152,7 +152,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                    <label htmlFor="phone" className="block text-base font-semibold mb-2">
                       Phone Number
                     </label>
                     <Input
@@ -166,7 +166,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium mb-2">
+                    <label htmlFor="subject" className="block text-base font-semibold mb-2">
                       Subject <span className="text-destructive">*</span>
                     </label>
                     <Select
@@ -187,7 +187,7 @@ const Contact = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium mb-2">
+                    <label htmlFor="message" className="block text-base font-semibold mb-2">
                       Message <span className="text-destructive">*</span>
                     </label>
                     <Textarea
@@ -204,7 +204,7 @@ const Contact = () => {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full bg-gradient-primary shadow-soft text-lg"
+                    className="w-full"
                   >
                     Send Message
                     <Send className="ml-2 h-5 w-5" />
@@ -215,7 +215,7 @@ const Contact = () => {
 
             {/* Social Media */}
             <div className="text-center mt-12 animate-fade-in-up" style={{ animationDelay: "400ms" }}>
-              <h3 className="font-heading font-semibold text-xl mb-4">Connect With Us Online</h3>
+              <h3 className="font-bold text-xl sm:text-2xl mb-4">Connect With Us Online</h3>
               <div className="flex justify-center gap-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -228,7 +228,7 @@ const Contact = () => {
                   </a>
                 ))}
               </div>
-              <p className="text-sm text-muted-foreground mt-4">
+              <p className="text-base text-muted-foreground mt-4">
                 Instagram: @prosperafinanceltd | Facebook: Prospera Finance Limited
               </p>
             </div>

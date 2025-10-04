@@ -56,12 +56,12 @@ const About = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 to-foreground/60"></div>
         </div>
-        <div className="container mx-auto px-4 z-10 relative">
+        <div className="container mx-auto px-4 sm:px-6 z-10 relative">
           <div className="max-w-3xl animate-fade-in-up">
-            <h1 className="font-heading font-bold text-5xl md:text-6xl text-background mb-4">
+            <h1 className="font-black text-4xl sm:text-5xl md:text-6xl text-background mb-4">
               About Us
             </h1>
-            <p className="text-xl text-background/90">
+            <p className="text-lg sm:text-xl text-background/90">
               Building trust, empowering growth, creating prosperity
             </p>
           </div>
@@ -69,16 +69,16 @@ const About = () => {
       </section>
 
       {/* Main Content */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none animate-fade-in-up">
-              <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+            <div className="animate-fade-in-up">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6">
                 At Prospera Finance, we believe money should be a tool for progress—not a barrier.
                 Our mission is simple: to empower individuals, businesses, and communities with
                 financial solutions that are reliable, flexible, and built for growth.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">{" "}
                 We were founded on the principle that everyone deserves access to funding and
                 investment opportunities without unnecessary roadblocks. Whether you're a student
                 seeking support, a business owner chasing expansion, or an investor looking to grow
@@ -90,8 +90,8 @@ const About = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20 bg-muted">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20 bg-muted">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {values.map((item, index) => (
               <Card
@@ -103,8 +103,8 @@ const About = () => {
                   <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-6">
                     <item.icon className="h-8 w-8 text-primary-foreground" />
                   </div>
-                  <h3 className="font-heading font-bold text-2xl mb-4">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="font-black text-2xl sm:text-3xl mb-4">{item.title}</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -113,10 +113,10 @@ const About = () => {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20">
-        <div className="container mx-auto px-4">
+      <section className="py-16 sm:py-20">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12 animate-fade-in-up">
-            <h2 className="font-heading font-bold text-4xl md:text-5xl text-foreground mb-4">
+            <h2 className="font-black text-3xl sm:text-4xl md:text-5xl text-foreground mb-4">
               Why Choose Us?
             </h2>
           </div>
@@ -132,8 +132,8 @@ const About = () => {
                   <CheckCircle2 className="h-8 w-8 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-heading font-semibold text-xl mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="font-bold text-xl sm:text-2xl mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground text-base leading-relaxed">{item.description}</p>
                 </div>
               </div>
             ))}
